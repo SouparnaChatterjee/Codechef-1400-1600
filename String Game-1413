@@ -1,0 +1,26 @@
+//last  odd one will favour Zlatan.
+//count,(n-count) whichever is less acts as limiting factor in forming pairs.
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+    int t,n;
+    string s;
+    cin>>t;
+    while(t--)
+    {
+        cin>>n;
+        cin>>s;
+        int count=0;
+        for(int i=0;i<n;i++)
+        {
+          if(s[i]=='1')
+        count++;  
+        }
+        if(min(count,n-count)%2==0)
+        cout<<"Ramos"<<endl;
+        else
+        cout<<"Zlatan"<<endl;
+    }
+}
